@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ZesuModelStoreContainer" CdmEntityContainer="ZesuEntities">
+    <EntitySetMapping Name="ZesuAdmin">
+      <EntityTypeMapping TypeName="ZesuModel.ZesuAdmin">
+        <MappingFragment StoreEntitySet="ZesuAdmin">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Admin" ColumnName="Admin" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZesuMesaj">
+      <EntityTypeMapping TypeName="ZesuModel.ZesuMesaj">
+        <MappingFragment StoreEntitySet="ZesuMesaj">
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Kimlik" ColumnName="Kimlik" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Mesaj" ColumnName="Mesaj" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kurumsal">
+      <EntityTypeMapping TypeName="ZesuModel.Kurumsal">
+        <MappingFragment StoreEntitySet="Kurumsal">
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SirketDurum">
+      <EntityTypeMapping TypeName="ZesuModel.SirketDurum">
+        <MappingFragment StoreEntitySet="SirketDurum">
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Sayi" ColumnName="Sayi" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hizmetler">
+      <EntityTypeMapping TypeName="ZesuModel.Hizmetler">
+        <MappingFragment StoreEntitySet="Hizmetler">
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Footer">
+      <EntityTypeMapping TypeName="ZesuModel.Footer">
+        <MappingFragment StoreEntitySet="Footer">
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Header">
+      <EntityTypeMapping TypeName="ZesuModel.Header">
+        <MappingFragment StoreEntitySet="Header">
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Header2">
+      <EntityTypeMapping TypeName="ZesuModel.Header2">
+        <MappingFragment StoreEntitySet="Header2">
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Header1" ColumnName="Header1" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="Saat" ColumnName="Saat" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Musteriler">
+      <EntityTypeMapping TypeName="ZesuModel.Musteriler">
+        <MappingFragment StoreEntitySet="Musteriler">
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+          <ScalarProperty Name="Tanim" ColumnName="Tanim" />
+          <ScalarProperty Name="Marka" ColumnName="Marka" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AnaResim">
+      <EntityTypeMapping TypeName="ZesuModel.AnaResim">
+        <MappingFragment StoreEntitySet="AnaResim">
+          <ScalarProperty Name="Tanim" ColumnName="Tanim" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AltResim">
+      <EntityTypeMapping TypeName="ZesuModel.AltResim">
+        <MappingFragment StoreEntitySet="AltResim">
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Tanim" ColumnName="Tanim" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hakkimizda">
+      <EntityTypeMapping TypeName="ZesuModel.Hakkimizda">
+        <MappingFragment StoreEntitySet="Hakkimizda">
+          <ScalarProperty Name="Resim2" ColumnName="Resim2" />
+          <ScalarProperty Name="Resim1" ColumnName="Resim1" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BambuUrun">
+      <EntityTypeMapping TypeName="ZesuModel.BambuUrun">
+        <MappingFragment StoreEntitySet="BambuUrun">
+          <ScalarProperty Name="AltTanim" ColumnName="AltTanim" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Tanim" ColumnName="Tanim" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BayanUrun">
+      <EntityTypeMapping TypeName="ZesuModel.BayanUrun">
+        <MappingFragment StoreEntitySet="BayanUrun">
+          <ScalarProperty Name="AltTanim" ColumnName="AltTanim" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Tanim" ColumnName="Tanim" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CocukUrun">
+      <EntityTypeMapping TypeName="ZesuModel.CocukUrun">
+        <MappingFragment StoreEntitySet="CocukUrun">
+          <ScalarProperty Name="AltTanim" ColumnName="AltTanim" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Tanim" ColumnName="Tanim" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ErkekUrun">
+      <EntityTypeMapping TypeName="ZesuModel.ErkekUrun">
+        <MappingFragment StoreEntitySet="ErkekUrun">
+          <ScalarProperty Name="AltTanim" ColumnName="AltTanim" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Tanim" ColumnName="Tanim" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SporcuUrun">
+      <EntityTypeMapping TypeName="ZesuModel.SporcuUrun">
+        <MappingFragment StoreEntitySet="SporcuUrun">
+          <ScalarProperty Name="AltTanim" ColumnName="AltTanim" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Tanim" ColumnName="Tanim" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AnaArkaResim">
+      <EntityTypeMapping TypeName="ZesuModel.AnaArkaResim">
+        <MappingFragment StoreEntitySet="AnaArkaResim">
+          <ScalarProperty Name="AnaArkaPlan" ColumnName="AnaArkaPlan" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

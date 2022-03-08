@@ -1,0 +1,612 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ZesuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AltResim">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" Nullable="false" />
+          <Property Name="Resim" Type="varchar" MaxLength="50" />
+          <Property Name="Baslik" Type="varchar" MaxLength="50" />
+          <Property Name="Tanim" Type="varchar" MaxLength="50" />
+          <Property Name="Aciklama" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="AnaArkaResim">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" Nullable="false" />
+          <Property Name="AnaArkaPlan" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="AnaResim">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" Nullable="false" />
+          <Property Name="Resim" Type="varchar" MaxLength="50" />
+          <Property Name="Aciklama" Type="varchar" MaxLength="50" />
+          <Property Name="Tanim" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="BambuUrun">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" Nullable="false" />
+          <Property Name="Resim" Type="varchar" MaxLength="50" />
+          <Property Name="Baslik" Type="varchar" MaxLength="50" />
+          <Property Name="Tanim" Type="varchar" MaxLength="50" />
+          <Property Name="AltTanim" Type="varchar" MaxLength="50" />
+          <Property Name="Aciklama" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="BayanUrun">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" Nullable="false" />
+          <Property Name="Resim" Type="varchar" MaxLength="50" />
+          <Property Name="Baslik" Type="varchar" MaxLength="50" />
+          <Property Name="Tanim" Type="varchar" MaxLength="50" />
+          <Property Name="AltTanim" Type="varchar" MaxLength="50" />
+          <Property Name="Aciklama" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CocukUrun">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" Nullable="false" />
+          <Property Name="Resim" Type="varchar" MaxLength="50" />
+          <Property Name="Baslik" Type="varchar" MaxLength="50" />
+          <Property Name="Tanim" Type="varchar" MaxLength="50" />
+          <Property Name="AltTanim" Type="varchar" MaxLength="50" />
+          <Property Name="Aciklama" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ErkekUrun">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" Nullable="false" />
+          <Property Name="Resim" Type="varchar" MaxLength="50" />
+          <Property Name="Baslik" Type="varchar" MaxLength="50" />
+          <Property Name="Tanim" Type="varchar" MaxLength="50" />
+          <Property Name="AltTanim" Type="varchar" MaxLength="50" />
+          <Property Name="Aciklama" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Footer">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" Nullable="false" />
+          <Property Name="Baslik" Type="varchar" MaxLength="50" />
+          <Property Name="Aciklama" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Hakkimizda">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" Nullable="false" />
+          <Property Name="Baslik" Type="varchar" MaxLength="100" />
+          <Property Name="Aciklama" Type="varchar(max)" />
+          <Property Name="Resim1" Type="varchar" MaxLength="50" />
+          <Property Name="Resim2" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Header">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" Nullable="false" />
+          <Property Name="Baslik" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Header2">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" Nullable="false" />
+          <Property Name="Telefon" Type="varchar" MaxLength="50" />
+          <Property Name="Mail" Type="varchar" MaxLength="150" />
+          <Property Name="Saat" Type="varchar" MaxLength="150" />
+          <Property Name="Baslik" Type="varchar" MaxLength="50" />
+          <Property Name="Header1" Type="varchar" MaxLength="50" />
+          <Property Name="Adres" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="Hizmetler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" Nullable="false" />
+          <Property Name="Baslik" Type="varchar" MaxLength="50" />
+          <Property Name="Aciklama" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Kurumsal">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" Nullable="false" />
+          <Property Name="Baslik" Type="varchar" MaxLength="50" />
+          <Property Name="Aciklama" Type="varchar(max)" />
+          <Property Name="Resim" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Musteriler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Aciklama" Type="varchar" MaxLength="150" />
+          <Property Name="Marka" Type="varchar" MaxLength="50" />
+          <Property Name="Tanim" Type="varchar" MaxLength="50" />
+          <Property Name="Resim" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="SirketDurum">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" Nullable="false" />
+          <Property Name="Sayi" Type="varchar" MaxLength="10" />
+          <Property Name="Aciklama" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SporcuUrun">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" Nullable="false" />
+          <Property Name="Resim" Type="varchar" MaxLength="50" />
+          <Property Name="Baslik" Type="varchar" MaxLength="50" />
+          <Property Name="Tanim" Type="varchar" MaxLength="50" />
+          <Property Name="AltTanim" Type="varchar" MaxLength="50" />
+          <Property Name="Aciklama" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ZesuAdmin">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Admin" Type="varchar" MaxLength="20" />
+          <Property Name="Sifre" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="ZesuMesaj">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Kimlik" Type="varchar" MaxLength="40" />
+          <Property Name="Email" Type="varchar" MaxLength="40" />
+          <Property Name="Mesaj" Type="varchar" MaxLength="300" />
+          <Property Name="Tarih" Type="smalldatetime" />
+        </EntityType>
+        <EntityContainer Name="ZesuModelStoreContainer">
+          <EntitySet Name="AltResim" EntityType="Self.AltResim" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AnaArkaResim" EntityType="Self.AnaArkaResim" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AnaResim" EntityType="Self.AnaResim" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BambuUrun" EntityType="Self.BambuUrun" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BayanUrun" EntityType="Self.BayanUrun" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CocukUrun" EntityType="Self.CocukUrun" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ErkekUrun" EntityType="Self.ErkekUrun" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Footer" EntityType="Self.Footer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Hakkimizda" EntityType="Self.Hakkimizda" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Header" EntityType="Self.Header" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Header2" EntityType="Self.Header2" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Hizmetler" EntityType="Self.Hizmetler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Kurumsal" EntityType="Self.Kurumsal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Musteriler" EntityType="Self.Musteriler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SirketDurum" EntityType="Self.SirketDurum" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SporcuUrun" EntityType="Self.SporcuUrun" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ZesuAdmin" EntityType="Self.ZesuAdmin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ZesuMesaj" EntityType="Self.ZesuMesaj" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ZesuModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ZesuAdmin">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Admin" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Sifre" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ZesuMesaj">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Kimlik" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Mesaj" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Tarih" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityContainer Name="ZesuEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ZesuAdmin" EntityType="Self.ZesuAdmin" />
+          <EntitySet Name="ZesuMesaj" EntityType="Self.ZesuMesaj" />
+          <EntitySet Name="Kurumsal" EntityType="ZesuModel.Kurumsal" />
+          <EntitySet Name="SirketDurum" EntityType="ZesuModel.SirketDurum" />
+          <EntitySet Name="Hizmetler" EntityType="ZesuModel.Hizmetler" />
+          <EntitySet Name="Footer" EntityType="ZesuModel.Footer" />
+          <EntitySet Name="Header" EntityType="ZesuModel.Header" />
+          <EntitySet Name="Header2" EntityType="ZesuModel.Header2" />
+          <EntitySet Name="Musteriler" EntityType="ZesuModel.Musteriler" />
+          <EntitySet Name="AnaResim" EntityType="ZesuModel.AnaResim" />
+          <EntitySet Name="AltResim" EntityType="ZesuModel.AltResim" />
+          <EntitySet Name="Hakkimizda" EntityType="ZesuModel.Hakkimizda" />
+          <EntitySet Name="BambuUrun" EntityType="ZesuModel.BambuUrun" />
+          <EntitySet Name="BayanUrun" EntityType="ZesuModel.BayanUrun" />
+          <EntitySet Name="CocukUrun" EntityType="ZesuModel.CocukUrun" />
+          <EntitySet Name="ErkekUrun" EntityType="ZesuModel.ErkekUrun" />
+          <EntitySet Name="SporcuUrun" EntityType="ZesuModel.SporcuUrun" />
+          <EntitySet Name="AnaArkaResim" EntityType="ZesuModel.AnaArkaResim" />
+        </EntityContainer>
+        <EntityType Name="Kurumsal">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" />
+          <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Resim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SirketDurum">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" />
+          <Property Name="Sayi" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Hizmetler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" />
+          <Property Name="Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Footer">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" />
+          <Property Name="Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Header">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" />
+          <Property Name="Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Header2">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" />
+          <Property Name="Telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Mail" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Saat" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Header1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Adres" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Musteriler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" />
+          <Property Name="Aciklama" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Marka" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tanim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Resim" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="AnaResim">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" />
+          <Property Name="Resim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tanim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="AltResim">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" />
+          <Property Name="Resim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tanim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Hakkimizda">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" />
+          <Property Name="Baslik" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Resim1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Resim2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="BambuUrun">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" />
+          <Property Name="Resim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tanim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AltTanim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="BayanUrun">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" />
+          <Property Name="Resim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tanim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AltTanim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="CocukUrun">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" />
+          <Property Name="Resim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tanim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AltTanim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ErkekUrun">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" />
+          <Property Name="Resim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tanim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AltTanim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SporcuUrun">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" />
+          <Property Name="Resim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Tanim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AltTanim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="AnaArkaResim">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" />
+          <Property Name="AnaArkaPlan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ZesuModelStoreContainer" CdmEntityContainer="ZesuEntities">
+          <EntitySetMapping Name="ZesuAdmin">
+            <EntityTypeMapping TypeName="ZesuModel.ZesuAdmin">
+              <MappingFragment StoreEntitySet="ZesuAdmin">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Admin" ColumnName="Admin" />
+                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ZesuMesaj">
+            <EntityTypeMapping TypeName="ZesuModel.ZesuMesaj">
+              <MappingFragment StoreEntitySet="ZesuMesaj">
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Kimlik" ColumnName="Kimlik" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Mesaj" ColumnName="Mesaj" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kurumsal">
+            <EntityTypeMapping TypeName="ZesuModel.Kurumsal">
+              <MappingFragment StoreEntitySet="Kurumsal">
+                <ScalarProperty Name="Resim" ColumnName="Resim" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SirketDurum">
+            <EntityTypeMapping TypeName="ZesuModel.SirketDurum">
+              <MappingFragment StoreEntitySet="SirketDurum">
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="Sayi" ColumnName="Sayi" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Hizmetler">
+            <EntityTypeMapping TypeName="ZesuModel.Hizmetler">
+              <MappingFragment StoreEntitySet="Hizmetler">
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Footer">
+            <EntityTypeMapping TypeName="ZesuModel.Footer">
+              <MappingFragment StoreEntitySet="Footer">
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Header">
+            <EntityTypeMapping TypeName="ZesuModel.Header">
+              <MappingFragment StoreEntitySet="Header">
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Header2">
+            <EntityTypeMapping TypeName="ZesuModel.Header2">
+              <MappingFragment StoreEntitySet="Header2">
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+                <ScalarProperty Name="Header1" ColumnName="Header1" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="Saat" ColumnName="Saat" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Musteriler">
+            <EntityTypeMapping TypeName="ZesuModel.Musteriler">
+              <MappingFragment StoreEntitySet="Musteriler">
+                <ScalarProperty Name="Resim" ColumnName="Resim" />
+                <ScalarProperty Name="Tanim" ColumnName="Tanim" />
+                <ScalarProperty Name="Marka" ColumnName="Marka" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AnaResim">
+            <EntityTypeMapping TypeName="ZesuModel.AnaResim">
+              <MappingFragment StoreEntitySet="AnaResim">
+                <ScalarProperty Name="Tanim" ColumnName="Tanim" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="Resim" ColumnName="Resim" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AltResim">
+            <EntityTypeMapping TypeName="ZesuModel.AltResim">
+              <MappingFragment StoreEntitySet="AltResim">
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="Tanim" ColumnName="Tanim" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="Resim" ColumnName="Resim" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Hakkimizda">
+            <EntityTypeMapping TypeName="ZesuModel.Hakkimizda">
+              <MappingFragment StoreEntitySet="Hakkimizda">
+                <ScalarProperty Name="Resim2" ColumnName="Resim2" />
+                <ScalarProperty Name="Resim1" ColumnName="Resim1" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BambuUrun">
+            <EntityTypeMapping TypeName="ZesuModel.BambuUrun">
+              <MappingFragment StoreEntitySet="BambuUrun">
+                <ScalarProperty Name="AltTanim" ColumnName="AltTanim" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="Tanim" ColumnName="Tanim" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="Resim" ColumnName="Resim" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BayanUrun">
+            <EntityTypeMapping TypeName="ZesuModel.BayanUrun">
+              <MappingFragment StoreEntitySet="BayanUrun">
+                <ScalarProperty Name="AltTanim" ColumnName="AltTanim" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="Tanim" ColumnName="Tanim" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="Resim" ColumnName="Resim" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CocukUrun">
+            <EntityTypeMapping TypeName="ZesuModel.CocukUrun">
+              <MappingFragment StoreEntitySet="CocukUrun">
+                <ScalarProperty Name="AltTanim" ColumnName="AltTanim" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="Tanim" ColumnName="Tanim" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="Resim" ColumnName="Resim" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ErkekUrun">
+            <EntityTypeMapping TypeName="ZesuModel.ErkekUrun">
+              <MappingFragment StoreEntitySet="ErkekUrun">
+                <ScalarProperty Name="AltTanim" ColumnName="AltTanim" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="Tanim" ColumnName="Tanim" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="Resim" ColumnName="Resim" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SporcuUrun">
+            <EntityTypeMapping TypeName="ZesuModel.SporcuUrun">
+              <MappingFragment StoreEntitySet="SporcuUrun">
+                <ScalarProperty Name="AltTanim" ColumnName="AltTanim" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="Tanim" ColumnName="Tanim" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="Resim" ColumnName="Resim" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AnaArkaResim">
+            <EntityTypeMapping TypeName="ZesuModel.AnaArkaResim">
+              <MappingFragment StoreEntitySet="AnaArkaResim">
+                <ScalarProperty Name="AnaArkaPlan" ColumnName="AnaArkaPlan" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

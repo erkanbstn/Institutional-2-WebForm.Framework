@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ZesuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AltResim">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" Nullable="false" />
+    <Property Name="Resim" Type="varchar" MaxLength="50" />
+    <Property Name="Baslik" Type="varchar" MaxLength="50" />
+    <Property Name="Tanim" Type="varchar" MaxLength="50" />
+    <Property Name="Aciklama" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AnaArkaResim">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" Nullable="false" />
+    <Property Name="AnaArkaPlan" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AnaResim">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" Nullable="false" />
+    <Property Name="Resim" Type="varchar" MaxLength="50" />
+    <Property Name="Aciklama" Type="varchar" MaxLength="50" />
+    <Property Name="Tanim" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="BambuUrun">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" Nullable="false" />
+    <Property Name="Resim" Type="varchar" MaxLength="50" />
+    <Property Name="Baslik" Type="varchar" MaxLength="50" />
+    <Property Name="Tanim" Type="varchar" MaxLength="50" />
+    <Property Name="AltTanim" Type="varchar" MaxLength="50" />
+    <Property Name="Aciklama" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="BayanUrun">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" Nullable="false" />
+    <Property Name="Resim" Type="varchar" MaxLength="50" />
+    <Property Name="Baslik" Type="varchar" MaxLength="50" />
+    <Property Name="Tanim" Type="varchar" MaxLength="50" />
+    <Property Name="AltTanim" Type="varchar" MaxLength="50" />
+    <Property Name="Aciklama" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CocukUrun">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" Nullable="false" />
+    <Property Name="Resim" Type="varchar" MaxLength="50" />
+    <Property Name="Baslik" Type="varchar" MaxLength="50" />
+    <Property Name="Tanim" Type="varchar" MaxLength="50" />
+    <Property Name="AltTanim" Type="varchar" MaxLength="50" />
+    <Property Name="Aciklama" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ErkekUrun">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" Nullable="false" />
+    <Property Name="Resim" Type="varchar" MaxLength="50" />
+    <Property Name="Baslik" Type="varchar" MaxLength="50" />
+    <Property Name="Tanim" Type="varchar" MaxLength="50" />
+    <Property Name="AltTanim" Type="varchar" MaxLength="50" />
+    <Property Name="Aciklama" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Footer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" Nullable="false" />
+    <Property Name="Baslik" Type="varchar" MaxLength="50" />
+    <Property Name="Aciklama" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Hakkimizda">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" Nullable="false" />
+    <Property Name="Baslik" Type="varchar" MaxLength="100" />
+    <Property Name="Aciklama" Type="varchar(max)" />
+    <Property Name="Resim1" Type="varchar" MaxLength="50" />
+    <Property Name="Resim2" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Header">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" Nullable="false" />
+    <Property Name="Baslik" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Header2">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" Nullable="false" />
+    <Property Name="Telefon" Type="varchar" MaxLength="50" />
+    <Property Name="Mail" Type="varchar" MaxLength="150" />
+    <Property Name="Saat" Type="varchar" MaxLength="150" />
+    <Property Name="Baslik" Type="varchar" MaxLength="50" />
+    <Property Name="Header1" Type="varchar" MaxLength="50" />
+    <Property Name="Adres" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Hizmetler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" Nullable="false" />
+    <Property Name="Baslik" Type="varchar" MaxLength="50" />
+    <Property Name="Aciklama" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Kurumsal">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" Nullable="false" />
+    <Property Name="Baslik" Type="varchar" MaxLength="50" />
+    <Property Name="Aciklama" Type="varchar(max)" />
+    <Property Name="Resim" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Musteriler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Aciklama" Type="varchar" MaxLength="150" />
+    <Property Name="Marka" Type="varchar" MaxLength="50" />
+    <Property Name="Tanim" Type="varchar" MaxLength="50" />
+    <Property Name="Resim" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="SirketDurum">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" Nullable="false" />
+    <Property Name="Sayi" Type="varchar" MaxLength="10" />
+    <Property Name="Aciklama" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SporcuUrun">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" Nullable="false" />
+    <Property Name="Resim" Type="varchar" MaxLength="50" />
+    <Property Name="Baslik" Type="varchar" MaxLength="50" />
+    <Property Name="Tanim" Type="varchar" MaxLength="50" />
+    <Property Name="AltTanim" Type="varchar" MaxLength="50" />
+    <Property Name="Aciklama" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ZesuAdmin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Admin" Type="varchar" MaxLength="20" />
+    <Property Name="Sifre" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="ZesuMesaj">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Kimlik" Type="varchar" MaxLength="40" />
+    <Property Name="Email" Type="varchar" MaxLength="40" />
+    <Property Name="Mesaj" Type="varchar" MaxLength="300" />
+    <Property Name="Tarih" Type="smalldatetime" />
+  </EntityType>
+  <EntityContainer Name="ZesuModelStoreContainer">
+    <EntitySet Name="AltResim" EntityType="Self.AltResim" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AnaArkaResim" EntityType="Self.AnaArkaResim" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AnaResim" EntityType="Self.AnaResim" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BambuUrun" EntityType="Self.BambuUrun" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BayanUrun" EntityType="Self.BayanUrun" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CocukUrun" EntityType="Self.CocukUrun" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ErkekUrun" EntityType="Self.ErkekUrun" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Footer" EntityType="Self.Footer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hakkimizda" EntityType="Self.Hakkimizda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Header" EntityType="Self.Header" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Header2" EntityType="Self.Header2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hizmetler" EntityType="Self.Hizmetler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kurumsal" EntityType="Self.Kurumsal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Musteriler" EntityType="Self.Musteriler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SirketDurum" EntityType="Self.SirketDurum" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SporcuUrun" EntityType="Self.SporcuUrun" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZesuAdmin" EntityType="Self.ZesuAdmin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ZesuMesaj" EntityType="Self.ZesuMesaj" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
